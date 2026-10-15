@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080a12">
+<meta name="description" content="Conheça o mini site do Dr. Douglas Martins.">
+<title>Dr. Douglas Martins</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#080a12;--navy:#11182b;--blue:#203d68;--gold:#e5bf83;--paper:#eee;--card:#d7d7d7;--white:#f8f7f4;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.site{width:100%;max-width:520px;margin:0 auto;overflow:hidden;background:var(--paper);box-shadow:0 0 48px #00000012}.hero{position:relative;isolation:isolate;min-height:660px;height:100svh;max-height:850px;background:#08090e;color:white;display:flex;flex-direction:column;justify-content:flex-end;padding:0 8% 22px;overflow:hidden}.hero::before{content:"";position:absolute;inset:0;z-index:-2;background-image:linear-gradient(180deg,#08090e00 10%,#08090e22 45%,#08090e 83%),url('assets/hero-portrait.jpg');background-size:cover;background-position:center 24%;transform:scale(1.025);animation:heroDrift 14s ease-in-out infinite alternate}.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,#0005,transparent 50%,#0002)}.hero-title{position:relative;margin:0 -2% 22px;font-family:var(--serif);font-size:clamp(3.6rem,15vw,5.9rem);font-weight:400;font-style:italic;line-height:.78;letter-spacing:-.055em;text-align:center;text-shadow:0 3px 22px #0007}.hero-title span{display:block}.stats{position:relative;display:grid;grid-template-columns:1fr 1fr;background:#080a12f2;padding:18px 8px 17px;margin:0 -5% 0;box-shadow:0 14px 32px #0003}.stat{text-align:center;display:flex;flex-direction:column;gap:3px}.stat+.stat{border-left:1px solid #294064}.stat strong{font-family:var(--serif);font-size:1.9rem;font-weight:400;color:var(--gold);line-height:1}.stat span{font-size:.66rem;color:#c5c4c5}.primary{display:flex;justify-content:center;align-items:center;min-height:48px;background:linear-gradient(100deg,#172746,#31527f);color:white;font-size:.8rem;letter-spacing:.02em;padding:13px 20px;transition:transform .35s,box-shadow .35s,filter .35s}.hero .primary{margin:0 3%}.primary:hover,.primary:focus-visible{transform:translateY(-3px);box-shadow:0 9px 22px #0d1b34aa;filter:brightness(1.12)}
+.cards{padding:58px 4.2% 72px;display:grid;gap:20px;background:var(--paper)}.feature-card{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr) 42%;min-height:174px;background:#d6d6d6;overflow:hidden;box-shadow:0 0 0 1px #00000006;transition:transform .5s cubic-bezier(.2,.75,.2,1),box-shadow .5s}.feature-card:nth-child(2){grid-template-columns:42% minmax(0,1fr);background:linear-gradient(110deg,#080a12,#171e35);color:white;border:7px solid #080a12;min-height:184px}.feature-card:nth-child(2) .card-copy{order:2;padding:13px 10px 12px 13px}.feature-card:nth-child(2) .card-image{order:1}.card-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:17px 9px 16px 18px;min-width:0}.card-copy h2{font-family:var(--serif);font-size:clamp(1.6rem,6.6vw,2.15rem);font-weight:600;font-style:italic;line-height:.95;letter-spacing:-.04em;margin:0 0 12px}.feature-card:nth-child(2) h2{color:var(--gold);font-size:clamp(1.45rem,5.9vw,1.95rem)}.card-copy p{font-size:clamp(.67rem,2.65vw,.79rem);line-height:1.5;margin:0 0 13px;max-width:22em}.mini-button{border:0;background:#11182b;color:#fff;display:inline-flex;justify-content:center;align-items:center;min-width:76%;padding:9px 12px;font-family:var(--sans);font-size:.53rem;letter-spacing:.2em;text-transform:uppercase;transition:transform .3s,background .3s,box-shadow .3s}.feature-card:nth-child(2) .mini-button{background:var(--gold);color:#171a24;min-width:90%}.feature-card:nth-child(3) .mini-button{background:#101629}.mini-button:hover,.mini-button:focus-visible{transform:translateY(-2px);box-shadow:0 5px 15px #0002}.card-image{width:100%;height:100%;min-height:174px;object-fit:cover;object-position:center;transition:transform .7s cubic-bezier(.2,.75,.2,1);background:#d5d5d5}.feature-card:nth-child(1) .card-image{object-position:center 25%}.feature-card:nth-child(2) .card-image{object-position:center 22%}.feature-card:nth-child(3) .card-image{object-position:center 25%}.feature-card:hover .card-image{transform:scale(1.045)}.shine{position:absolute;inset:-80% -55%;z-index:2;pointer-events:none;background:linear-gradient(112deg,transparent 42%,#ffffff00 46%,#fff7 50%,#ffffff00 54%,transparent 58%);transform:translateX(-70%) rotate(8deg);opacity:0}.feature-card:hover .shine{opacity:1;animation:shinePass 1.15s ease-out}.feature-card:focus-within{outline:2px solid #d9b67c;outline-offset:3px}
+.about{position:relative;isolation:isolate;background:#080a12;color:white;text-align:center;padding:54px 7% 0;overflow:hidden}.about::before{content:"DM";position:absolute;z-index:-1;top:-38px;left:-35px;font-family:var(--serif);font-size:19rem;font-weight:600;line-height:1;color:#ffffff08;letter-spacing:-.12em}.section-title{font-family:var(--serif);font-size:clamp(2.1rem,9vw,3.15rem);font-weight:400;font-style:italic;line-height:.9;letter-spacing:-.045em;margin:0 0 22px}.section-title em{font-weight:600;color:var(--gold)}.about p{max-width:360px;margin:0 auto 25px;font-size:.72rem;line-height:1.6;color:#eee}.about-banner{position:relative;z-index:2;width:100%;height:150px;object-fit:cover;object-position:center 44%;margin:0 auto -28px;box-shadow:0 12px 35px #0003}
+.contact-area{position:relative;padding:66px 15% 0;background:var(--paper);z-index:3}.contact-card{position:relative;isolation:isolate;text-align:center;background:#d6d6d6;padding:24px 16px 26px;box-shadow:0 10px 30px #00000008;overflow:hidden}.contact-card .section-title{color:#20334f;font-size:clamp(2.2rem,8.8vw,3rem);margin-bottom:16px}.contact-card p{font-size:.64rem;line-height:1.5;color:#4d5360;margin:0 auto 18px;max-width:250px}.dark-button{display:inline-flex;align-items:center;justify-content:center;min-height:39px;width:78%;background:#11182b;color:white;font-size:.55rem;letter-spacing:.28em;padding:10px 15px;transition:background .3s,transform .3s,box-shadow .3s}.dark-button:hover,.dark-button:focus-visible{background:#253e65;transform:translateY(-2px);box-shadow:0 6px 18px #0002}.footer{position:relative;isolation:isolate;min-height:500px;padding:0 8% 28px;background:#080a12;color:white;display:flex;align-items:flex-end;justify-content:center;text-align:center;overflow:hidden}.footer::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,#080a12 0%,#080a1220 28%,#080a1200 60%,#080a12ef 100%),url('assets/footer-portrait.jpg');background-size:cover;background-position:center 25%;transform:scale(1.02)}.footer::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#080a1220,#080a1200,#080a1220)}.copyright{width:100%;border-top:1px solid #b6a27d;padding-top:14px;font-size:.55rem;line-height:1.8;letter-spacing:.01em;color:#f4f0eb}.copyright span{display:block}
+.reveal{opacity:0;transform:translateY(24px);filter:blur(3px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.75,.2,1),filter .8s ease}.reveal.is-visible{opacity:1;transform:translateY(0);filter:blur(0)}.reveal.delay-1{transition-delay:.12s}.reveal.delay-2{transition-delay:.22s}.reveal.delay-3{transition-delay:.32s}.hero-title{animation:titleEnter 1.15s .12s both cubic-bezier(.2,.75,.2,1)}.stats{animation:fadeUp .8s .32s both}.hero .primary{animation:fadeUp .8s .48s both}@keyframes titleEnter{from{opacity:0;transform:translateY(25px);filter:blur(5px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}@keyframes fadeUp{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}@keyframes heroDrift{from{transform:scale(1.025) translateY(0)}to{transform:scale(1.075) translateY(-7px)}}@keyframes shinePass{0%{transform:translateX(-70%) rotate(8deg)}100%{transform:translateX(70%) rotate(8deg)}}
+@media(min-width:600px){body{padding:24px 0}.site{border-radius:4px}.hero{height:780px}.cards{padding-left:22px;padding-right:22px}.feature-card{min-height:190px}.card-image{min-height:190px}.about-banner{height:180px}.footer{min-height:560px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none;filter:none}}
+</style>
+</head>
+<body>
+<main class="site">
+  <section class="hero" id="inicio" aria-label="Apresentação do Dr. Douglas Martins">
+    <h1 class="hero-title"><span>Dr. Douglas</span><span>Martins</span></h1>
+    <div class="stats" aria-label="Experiência profissional">
+      <div class="stat"><strong>+350</strong><span>casos resolvidos</span></div>
+      <div class="stat"><strong>+10 anos</strong><span>de experiência</span></div>
+    </div>
+    <a class="primary" href="#contato">Acesse Meu Site</a>
+  </section>
+  <section class="cards" aria-label="Acessos principais">
+    <article class="feature-card reveal">
+      <div class="card-copy"><h2>Agendamento</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><a class="mini-button" href="#contato">Saiba mais</a></div>
+      <img class="card-image" src="assets/photo-agendamento.jpg" alt="Dr. Douglas Martins em traje social" loading="lazy">
+      <span class="shine" aria-hidden="true"></span>
+    </article>
+    <article class="feature-card reveal delay-1">
+      <div class="card-copy"><h2>Acesse meu site</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><a class="mini-button" href="#contato">Saiba mais</a></div>
+      <img class="card-image" src="assets/photo-site.jpg" alt="Dr. Douglas Martins" loading="lazy">
+      <span class="shine" aria-hidden="true"></span>
+    </article>
+    <article class="feature-card reveal delay-2">
+      <div class="card-copy"><h2>Meus serviços</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><a class="mini-button" href="#contato">Saiba mais</a></div>
+      <img class="card-image" src="assets/photo-servicos.jpg" alt="Dr. Douglas Martins com terno azul" loading="lazy">
+      <span class="shine" aria-hidden="true"></span>
+    </article>
+  </section>
+  <section class="about" id="sobre">
+    <div class="reveal"><h2 class="section-title">Quem é <em>Douglas<br>Martins?</em></h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur.</p></div>
+    <img class="about-banner reveal delay-1" src="assets/about-banner.jpg" alt="Dr. Douglas Martins sentado em um ambiente de estúdio" loading="lazy">
+  </section>
+  <section class="contact-area" id="contato">
+    <div class="contact-card reveal"><h2 class="section-title">Ficou com<br>alguma dúvida?</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed</p><a class="dark-button" href="#inicio" aria-label="Voltar ao início; adicione aqui o link real de contato">FALE COMIGO</a></div>
+  </section>
+  <footer class="footer" aria-label="Rodapé">
+    <div class="copyright"><span>Copyright © 2026 • Douglas Martins</span><span>TODOS OS DIREITOS RESERVADOS</span></div>
+  </footer>
+</main>
+<script>
+(() => {
+ const items = document.querySelectorAll('.reveal');
+ if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+   items.forEach(item => item.classList.add('is-visible'));
+   return;
+ }
+ const observer = new IntersectionObserver(entries => {
+   entries.forEach(entry => {
+     if (entry.isIntersecting) {
+       entry.target.classList.add('is-visible');
+       observer.unobserve(entry.target);
+     }
+   });
+ }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+ items.forEach(item => observer.observe(item));
+})();
+</script>
+</body>
+</html>
